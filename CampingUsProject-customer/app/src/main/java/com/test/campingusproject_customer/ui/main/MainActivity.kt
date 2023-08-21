@@ -1,7 +1,8 @@
-package com.test.campingusproject_customer
+package com.test.campingusproject_customer.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.test.campingusproject_customer.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
