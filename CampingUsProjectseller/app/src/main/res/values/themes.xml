@@ -5,7 +5,13 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <!--디폴트 스플래시 스크린이 나오므로 그것을 안보이게 해주는 것-->
     <style name="Theme.CampingUsProjectseller" parent="Base.Theme.CampingUsProjectseller" />
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="postSplashScreenTheme">@style/Theme.CampingUsProjectseller</item>
+        <item name="windowSplashScreenAnimationDuration">0</item>
+    </style>
     
     <style name="Theme.App.Large" parent="Theme.CampingUsProjectseller">
         <item name="android:textSize">@dimen/text_size_1</item>
