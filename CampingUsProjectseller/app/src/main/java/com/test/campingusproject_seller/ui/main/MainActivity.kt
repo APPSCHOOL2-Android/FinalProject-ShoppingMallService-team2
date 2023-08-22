@@ -9,8 +9,13 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.test.campingusproject_seller.R
 import com.test.campingusproject_seller.databinding.ActivityMainBinding
+<<<<<<< HEAD
 import com.test.campingusproject_seller.ui.notification.NotificationMainFragment
 import com.test.campingusproject_seller.repository.UserInfoRepository
+=======
+import com.test.campingusproject_seller.ui.inquiry.InquiryDetailFragment
+import com.test.campingusproject_seller.ui.inquiry.InquiryFragment
+>>>>>>> feature/4_inquiry_fragment_function
 import com.test.campingusproject_seller.ui.product.ManageProductFragment
 import com.test.campingusproject_seller.ui.product.ModifyProductFragment
 import com.test.campingusproject_seller.ui.product.RegisterProductFragment
@@ -28,12 +33,17 @@ class MainActivity : AppCompatActivity() {
         val MANAGE_PRODUCT_FRAGMENT = "ManageProductFragment"
         val MODIFY_PRODUCT_FRAGMENT = "ModifyProductFragment"
         val REGISTER_PRODUCT_FRAGMENT = "RegisterProductFragment"
+<<<<<<< HEAD
         val SELL_STATE_FRAGMENT = "SellStateFragment"
         val SELL_STATE_DETAIL_FRAGMENT = "SellStateDetailFragment"
         val NOTIFICATION_MAIN_FRAGMENT = "NotificationMainFragment"
         val LOGIN_FRAGMENT="LoginFragment"
         val JOIN_FRAGMENT="joinFragment"
         val AUTH_FRAGMENT="AuthFragment"
+=======
+        val INQUIRY_FRAGMENT = "InquiryFragment"
+        val INQUIRY_DETAIL_FRAGMENT = "InquiryDetailFragment"
+>>>>>>> feature/4_inquiry_fragment_function
     }
 
     val permissionList = arrayOf(
@@ -75,8 +85,12 @@ class MainActivity : AppCompatActivity() {
                     }
                     //고객문의 클릭
                     R.id.menuItemCustomerAsk->{
+<<<<<<< HEAD
                         it.isChecked = true
 
+=======
+                        replaceFragment(INQUIRY_FRAGMENT, false, false, null)
+>>>>>>> feature/4_inquiry_fragment_function
                     }
                     //내정보 클릭
                     R.id.menuItemMyInfo->{
@@ -99,12 +113,17 @@ class MainActivity : AppCompatActivity() {
             MANAGE_PRODUCT_FRAGMENT -> ManageProductFragment()
             MODIFY_PRODUCT_FRAGMENT -> ModifyProductFragment()
             REGISTER_PRODUCT_FRAGMENT -> RegisterProductFragment()
+<<<<<<< HEAD
             SELL_STATE_FRAGMENT -> SellStateFragment()
             SELL_STATE_DETAIL_FRAGMENT -> SellStateDetailFragment()
             NOTIFICATION_MAIN_FRAGMENT -> NotificationMainFragment()
             LOGIN_FRAGMENT->LoginFragment()
             JOIN_FRAGMENT->JoinFragment()
             AUTH_FRAGMENT->AuthFragment()
+=======
+            INQUIRY_FRAGMENT -> InquiryFragment()
+            INQUIRY_DETAIL_FRAGMENT -> InquiryDetailFragment()
+>>>>>>> feature/4_inquiry_fragment_function
             else -> Fragment()
         }
 
