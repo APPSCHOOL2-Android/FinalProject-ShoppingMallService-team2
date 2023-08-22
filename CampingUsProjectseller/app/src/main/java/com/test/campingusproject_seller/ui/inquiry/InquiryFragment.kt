@@ -32,18 +32,17 @@ class InquiryFragment : Fragment() {
         mainActivity = activity as MainActivity
         fragmentInquiryBinding = FragmentInquiryBinding.inflate(layoutInflater)
 
-        fragmentInquiryBinding.run {
-
-//            inquiryViewModel = ViewModelProvider(mainActivity)[InquiryViewModel::class.java]
-//            inquiryViewModel.run {
-//                inquiryDataList.observe(mainActivity) {
-//                    fragmentInquiryBinding.recyclerViewInquiry.adapter?.notifyDataSetChanged()
-//                }
+//        inquiryViewModel = ViewModelProvider(mainActivity)[InquiryViewModel::class.java]
+//        inquiryViewModel.run {
+//            inquiryDataList.observe(mainActivity) {
+//                fragmentInquiryBinding.recyclerViewInquiry.adapter?.notifyDataSetChanged()
 //            }
+//        }
 
-            // 하단 nav bar 보이게
-            mainActivity.activityMainBinding.bottomNavigationViewMain.visibility = View.VISIBLE
+        //하단 nav bar 보이게
+        mainActivity.activityMainBinding.bottomNavigationViewMain.visibility = View.VISIBLE
 
+        fragmentInquiryBinding.run {
 
             // 뒤로가기 아이콘
             topAppBarInquiry.setNavigationOnClickListener {
@@ -133,18 +132,16 @@ class InquiryFragment : Fragment() {
         override fun onBindViewHolder(holder: InquiryViewHolderClass, position: Int) {
             holder.textViewInquiryName.text = "test $position"
 //            holder.imageViewInquiryProfile.setImageBitmap()
-//            holder.textViewInquiryTitle.text =
-//                inquiryViewModel.inquiryDataList.value?.get(position)?.inquiryItemTitle
-//            holder.textViewInquiryName.text =
-//                inquiryViewModel.inquiryDataList.value?.get(position)?.inquiryUserName
-//            holder.textViewInquiryContent.text =
-//                inquiryViewModel.inquiryDataList.value?.get(position)?.inquiryContent
+//            holder.textViewInquiryTitle.text = inquiryViewModel.inquiryDataList.value?.get(position)?.inquiryItemTitle
+//            holder.textViewInquiryName.text = inquiryViewModel.inquiryDataList.value?.get(position)?.inquiryUserName
+//            holder.textViewInquiryContent.text = inquiryViewModel.inquiryDataList.value?.get(position)?.inquiryContent
 //
-//            if (inquiryViewModel.inquiryDataList.value?.get(position)?.inquiryResult == true) {
+//            if(inquiryViewModel.inquiryDataList.value?.get(position)?.inquiryResult == true) {
 //                holder.textViewInquiryContent.text = "답변 완료"
 //            } else {
 //                holder.textViewInquiryContent.text = "미답변"
 //            }
+
         }
     }
 

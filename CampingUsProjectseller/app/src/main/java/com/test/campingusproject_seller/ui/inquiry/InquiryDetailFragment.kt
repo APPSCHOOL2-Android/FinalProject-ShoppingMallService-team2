@@ -14,6 +14,9 @@ import com.test.campingusproject_seller.dataclassmodel.InquiryModel
 import com.test.campingusproject_seller.repository.InquiryRepository
 import com.test.campingusproject_seller.ui.main.MainActivity
 import com.test.campingusproject_seller.viewmodel.InquiryViewModel
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class InquiryDetailFragment : Fragment() {
 
@@ -24,7 +27,6 @@ class InquiryDetailFragment : Fragment() {
 
     // 문의 목록 인덱스 번호를 받는다.
     var inquiryIdx = 0L
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -84,14 +86,15 @@ class InquiryDetailFragment : Fragment() {
 //                            mainActivity.removeFragment(MainActivity.INQUIRY_DETAIL_FRAGMENT)
 //                        }
 //                    }
+
                 }
             }
         }
 
-        // 문의 인덱스 번호를 받는다.
-        inquiryIdx = arguments?.getLong("inquiryIdx")!!
-        // 문의 정보를 가져온다.
-        inquiryViewModel.setInquiryDetailData(inquiryIdx.toDouble())
+//        // 문의 인덱스 번호를 받는다.
+//        inquiryIdx = arguments?.getLong("inquiryIdx")!!
+//        // 문의 정보를 가져온다.
+//        inquiryViewModel.setInquiryDetailData(inquiryIdx.toDouble())
 
         return fragmentInquiryDetailBinding.root
     }
