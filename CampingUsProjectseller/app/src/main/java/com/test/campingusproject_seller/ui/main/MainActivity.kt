@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.test.campingusproject_seller.R
 import com.test.campingusproject_seller.databinding.ActivityMainBinding
+import com.test.campingusproject_seller.ui.inquiry.InquiryDetailFragment
+import com.test.campingusproject_seller.ui.inquiry.InquiryFragment
 import com.test.campingusproject_seller.ui.product.ManageProductFragment
 import com.test.campingusproject_seller.ui.product.ModifyProductFragment
 import com.test.campingusproject_seller.ui.product.RegisterProductFragment
@@ -20,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         val MANAGE_PRODUCT_FRAGMENT = "ManageProductFragment"
         val MODIFY_PRODUCT_FRAGMENT = "ModifyProductFragment"
         val REGISTER_PRODUCT_FRAGMENT = "RegisterProductFragment"
+        val INQUIRY_FRAGMENT = "InquiryFragment"
+        val INQUIRY_DETAIL_FRAGMENT = "InquiryDetailFragment"
     }
 
     val permissionList = arrayOf(
@@ -49,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     //고객문의 클릭
                     R.id.menuItemCustomerAsk->{
-
+                        replaceFragment(INQUIRY_FRAGMENT, false, false, null)
                     }
                     //내정보 클릭
                     R.id.menuItemMyInfo->{
@@ -71,6 +75,8 @@ class MainActivity : AppCompatActivity() {
             MANAGE_PRODUCT_FRAGMENT -> ManageProductFragment()
             MODIFY_PRODUCT_FRAGMENT -> ModifyProductFragment()
             REGISTER_PRODUCT_FRAGMENT -> RegisterProductFragment()
+            INQUIRY_FRAGMENT -> InquiryFragment()
+            INQUIRY_DETAIL_FRAGMENT -> InquiryDetailFragment()
             else -> Fragment()
         }
 
