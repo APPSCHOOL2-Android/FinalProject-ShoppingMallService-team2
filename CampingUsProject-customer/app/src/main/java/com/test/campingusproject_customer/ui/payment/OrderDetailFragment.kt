@@ -5,24 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.CheckBox
 import android.widget.ImageView
-import android.widget.Spinner
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.test.campingusproject_customer.R
-import com.test.campingusproject_customer.databinding.FragmentPaymentBinding
-import com.test.campingusproject_customer.databinding.RowCartBinding
+import com.test.campingusproject_customer.databinding.FragmentOrderDetailBinding
 import com.test.campingusproject_customer.databinding.RowPaymentBinding
 import com.test.campingusproject_customer.ui.main.MainActivity
 
-class PaymentFragment : Fragment() {
+class OrderDetailFragment : Fragment() {
 
     lateinit var mainActivity: MainActivity
-    lateinit var fragmentPaymentBinding: FragmentPaymentBinding
+    lateinit var fragmentOrderDetailBinding: FragmentOrderDetailBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,39 +26,34 @@ class PaymentFragment : Fragment() {
         // Inflate the layout for this fragment
 
         mainActivity = activity as MainActivity
-        fragmentPaymentBinding = FragmentPaymentBinding.inflate(layoutInflater)
+        fragmentOrderDetailBinding = FragmentOrderDetailBinding.inflate(layoutInflater)
 
-        fragmentPaymentBinding.run {
+        fragmentOrderDetailBinding.run {
             // 툴바
-            toolbarPayment.run {
+            toolbarOrderDetail.run {
                 //백버튼 설정
                 setNavigationIcon(androidx.appcompat.R.drawable.abc_ic_ab_back_material)
                 setNavigationOnClickListener {
+                    mainActivity.removeFragment(MainActivity.ORDER_DETAIL_FRAGMENT)
                     mainActivity.removeFragment(MainActivity.PAYMENT_FRAGMENT)
+                    mainActivity.removeFragment(MainActivity.CART_FRAGMENT)
                 }
             }
 
             // 리사이클러 뷰
-            recyclerViewPaymentProduct.run {
-                adapter = PaymentAdapter()
+            recyclerViewOrderDetail.run {
+                adapter = OrderDetailAdapter()
                 layoutManager = LinearLayoutManager(mainActivity)
-            }
-
-            // 결제하기 버튼
-            buttonPaymentBuy.run {
-                setOnClickListener {
-                    mainActivity.replaceFragment(MainActivity.ORDER_DETAIL_FRAGMENT, true, true, null)
-                }
             }
         }
 
-        return fragmentPaymentBinding.root
+        return fragmentOrderDetailBinding.root
     }
 
-    // Payment 어댑터
-    inner class PaymentAdapter : RecyclerView.Adapter<PaymentAdapter.PaymentViewHolder>(){
+    // OrderDetail 어댑터
+    inner class OrderDetailAdapter : RecyclerView.Adapter<OrderDetailAdapter.OrderDetailViewHolder>(){
 
-        inner class PaymentViewHolder(rowPaymentBinding: RowPaymentBinding) : RecyclerView.ViewHolder(rowPaymentBinding.root) {
+        inner class OrderDetailViewHolder(rowPaymentBinding: RowPaymentBinding) : RecyclerView.ViewHolder(rowPaymentBinding.root) {
             val textViewRowPaymentTitle : TextView
             val imageViewRowPayment : ImageView
             val textViewRowPaymentContent : TextView
@@ -77,7 +67,7 @@ class PaymentFragment : Fragment() {
             }
         }
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PaymentViewHolder {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderDetailViewHolder {
             val rowPaymentBinding = RowPaymentBinding.inflate(layoutInflater)
 
             rowPaymentBinding.root.layoutParams = ViewGroup.LayoutParams(
@@ -85,14 +75,14 @@ class PaymentFragment : Fragment() {
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
 
-            return PaymentViewHolder(rowPaymentBinding)
+            return OrderDetailViewHolder(rowPaymentBinding)
         }
 
         override fun getItemCount(): Int {
-            return 10
+            return 3
         }
 
-        override fun onBindViewHolder(holder: PaymentViewHolder, position: Int) {
+        override fun onBindViewHolder(holder: OrderDetailViewHolder, position: Int) {
             holder.textViewRowPaymentTitle.text = "title $position"
 
         }

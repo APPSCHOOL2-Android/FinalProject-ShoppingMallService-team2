@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.payment.PaymentFragment">
+    tools:context=".ui.payment.OrderDetailFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbarPayment"
+        android:id="@+id/toolbarOrderDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="주문 / 결제"
+            android:text="주문 상세 보기"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
     </com.google.android.material.appbar.MaterialToolbar>
 
@@ -43,7 +43,7 @@
                 android:padding="15dp">
 
                 <TextView
-                    android:id="@+id/textViewPaymentProduct"
+                    android:id="@+id/textViewOrderDetail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="주문상품"
@@ -56,160 +56,11 @@
                     android:orientation="vertical">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerViewPaymentProduct"
+                        android:id="@+id/recyclerViewOrderDetail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
-
-
-                <!--                <View-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="2dp"-->
-                <!--                    android:layout_marginLeft="5dp"-->
-                <!--                    android:layout_marginTop="10dp"-->
-                <!--                    android:layout_marginRight="5dp"-->
-                <!--                    android:layout_marginBottom="10dp"-->
-                <!--                    android:background="#000000" />-->
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp">
-
-                <TextView
-                    android:id="@+id/textViewPaymentInformation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="주문자"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textViewPaymentName"
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="이름"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayoutPaymentName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textCursorDrawable="@color/highLightColor"
-                        android:transitionGroup="true"
-                        app:boxStrokeColor="@drawable/textinputlayout_selector"
-                        app:endIconMode="clear_text">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/textInputEditTextPaymentName"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginLeft="10dp"
-                            android:inputType="text|textPersonName"
-                            android:padding="10dp"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textCursorDrawable="@drawable/shape_text_input_edit_text" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textViewPaymentEmail"
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="이메일"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayoutPaymentEmail"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textCursorDrawable="@color/highLightColor"
-                        android:transitionGroup="true"
-                        app:boxStrokeColor="@drawable/textinputlayout_selector"
-                        app:endIconMode="clear_text">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/textInputEditTextPaymentEmail"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginLeft="10dp"
-                            android:inputType="text|textPersonName"
-                            android:padding="10dp"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textCursorDrawable="@drawable/shape_text_input_edit_text" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textViewPaymentPhone"
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="전화번호"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayoutPaymentPhone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textCursorDrawable="@color/highLightColor"
-                        android:transitionGroup="true"
-                        app:boxStrokeColor="@drawable/textinputlayout_selector"
-                        app:endIconMode="clear_text">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/textInputEditTextPaymentPhone"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginLeft="10dp"
-                            android:inputType="text|textPersonName"
-                            android:padding="10dp"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textCursorDrawable="@drawable/shape_text_input_edit_text" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </LinearLayout>
-
-                <!--                <View-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="2dp"-->
-                <!--                    android:layout_marginLeft="5dp"-->
-                <!--                    android:layout_marginTop="10dp"-->
-                <!--                    android:layout_marginRight="5dp"-->
-                <!--                    android:layout_marginBottom="10dp"-->
-                <!--                    android:background="#000000" />-->
 
             </LinearLayout>
 
@@ -239,43 +90,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textViewPaymentLocation"
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="배송지명"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayoutPaymentLocation"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textCursorDrawable="@color/highLightColor"
-                        android:transitionGroup="true"
-                        app:boxStrokeColor="@drawable/textinputlayout_selector"
-                        app:endIconMode="clear_text">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/textInputEditTextPaymentLocation"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginLeft="10dp"
-                            android:inputType="text|textPersonName"
-                            android:padding="10dp"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textCursorDrawable="@drawable/shape_text_input_edit_text" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textViewPaymentRecipent"
+                        android:id="@+id/textViewOrderDetailRecipent"
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -283,7 +98,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayoutPaymentRecipent"
+                        android:id="@+id/textInputLayoutOrderDetailRecipent"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textCursorDrawable="@color/highLightColor"
@@ -292,15 +107,16 @@
                         app:endIconMode="clear_text">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/textInputEditTextPaymentRecipent"
+                            android:id="@+id/textInputEditTextOrderDetailRecipent"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
                             android:layout_marginLeft="10dp"
-                            android:inputType="text|textPersonName"
+                            android:enabled="false"
                             android:padding="10dp"
+                            android:text="받는사람 이름"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textCursorDrawable="@drawable/shape_text_input_edit_text" />
+                            android:textColor="@color/black" />
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -312,7 +128,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textViewPaymentContact"
+                        android:id="@+id/textViewOrderDetailContact"
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -320,7 +136,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayoutPaymentContact"
+                        android:id="@+id/textInputLayoutOrderDetailContact"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textCursorDrawable="@color/highLightColor"
@@ -329,15 +145,16 @@
                         app:endIconMode="clear_text">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/textInputEditTextPaymentContact"
+                            android:id="@+id/textInputEditTextOrderDetailContact"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
                             android:layout_marginLeft="10dp"
-                            android:inputType="text|textPersonName"
+                            android:enabled="false"
                             android:padding="10dp"
+                            android:text="받는사람 연락처"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textCursorDrawable="@drawable/shape_text_input_edit_text" />
+                            android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
 
@@ -348,7 +165,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textViewPaymentAddress"
+                        android:id="@+id/textViewOrderDetailAddress"
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -356,7 +173,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayoutPaymentAddress"
+                        android:id="@+id/textInputLayoutOrderDetailAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textCursorDrawable="@color/highLightColor"
@@ -365,15 +182,149 @@
                         app:endIconMode="clear_text">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/textInputEditTextPaymentAddress"
+                            android:id="@+id/textInputEditTextOrderDetailAddress"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
                             android:layout_marginLeft="10dp"
-                            android:inputType="text|textPersonName"
+                            android:enabled="false"
                             android:padding="10dp"
+                            android:text="받는사람 주소"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textCursorDrawable="@drawable/shape_text_input_edit_text" />
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="주문자"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewOrderDetailName"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="이름"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutOrderDetailName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@color/highLightColor"
+                        android:transitionGroup="true"
+                        app:boxStrokeColor="@drawable/textinputlayout_selector"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textInputEditTextOrderDetailName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="10dp"
+                            android:enabled="false"
+                            android:padding="10dp"
+                            android:text="주문자 이름"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewOrderDetailPhone"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="이메일"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutOrderDetailPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@color/highLightColor"
+                        android:transitionGroup="true"
+                        app:boxStrokeColor="@drawable/textinputlayout_selector"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textInputEditTextOrderDetailPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="10dp"
+                            android:enabled="false"
+                            android:padding="10dp"
+                            android:text="주문자 이메일"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewOrderDetailEmail"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="휴대전화"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutOrderDetailEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@color/highLightColor"
+                        android:transitionGroup="true"
+                        app:boxStrokeColor="@drawable/textinputlayout_selector"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textInputEditTextOrderDetailEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="10dp"
+                            android:enabled="false"
+                            android:padding="10dp"
+                            android:text="주문자 전화번호"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
 
@@ -398,57 +349,41 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textStyle="bold" />
 
-                <RadioGroup
-                    android:id="@+id/radioGroup"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checkedButton="@+id/radio_button_1">
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/radio_button_card"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:buttonTint="@color/highLightColor"
-                        android:text="카드"
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="결제수단"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/highLightColor" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutOrderDetailPaymentMethod"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@color/highLightColor"
+                        android:transitionGroup="true"
+                        app:boxStrokeColor="@drawable/textinputlayout_selector"
+                        app:endIconMode="clear_text">
 
-                    <RadioButton
-                        android:id="@+id/radio_button_no_passbook"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:buttonTint="@color/highLightColor"
-                        android:text="무통장"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/highLightColor" />
-
-                    <RadioButton
-                        android:id="@+id/radio_button_toss"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="토스"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/highLightColor" />
-
-                    <RadioButton
-                        android:id="@+id/radio_button_payco"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="페이코"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-                </RadioGroup>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textInputEditTextOrderDetailPaymentMethod"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="카드"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -467,101 +402,106 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="결제금액"
+                    android:text="결제 금액"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
-                        android:text="총 상품 금액"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        android:gravity="center"
+                        android:text="금액"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:id="@+id/textViewPaymentTotalCost"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutOrderDetailPaymentAmount"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="27,900원"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:textStyle="bold" />
+                        android:textCursorDrawable="@color/highLightColor"
+                        android:transitionGroup="true"
+                        app:boxStrokeColor="@drawable/textinputlayout_selector"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textInputEditTextOrderDetailPaymentAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="000.000"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="배송비"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:id="@+id/textViewPaymentDeliveryCharge"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0원"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="쿠폰 사용"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:id="@+id/textViewPaymentCoupon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0원"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-                </LinearLayout>
-
 
             </LinearLayout>
 
-
-            <Button
-                android:id="@+id/buttonPaymentBuy"
-                style="@style/Widget.Material3.Button.ElevatedButton"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/subColor"
-                android:text="원 결제하기"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/highLightColor" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="주문 처리 상태"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="상태"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutOrderDetailState"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@color/highLightColor"
+                        android:transitionGroup="true"
+                        app:boxStrokeColor="@drawable/textinputlayout_selector"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textInputEditTextOrderDetailState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="배송 완료"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>
