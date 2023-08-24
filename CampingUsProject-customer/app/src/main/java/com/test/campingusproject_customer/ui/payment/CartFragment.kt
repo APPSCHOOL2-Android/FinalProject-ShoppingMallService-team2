@@ -55,6 +55,12 @@ class CartFragment : Fragment() {
                 adapter = CartAdapter()
                 layoutManager = LinearLayoutManager(mainActivity)
             }
+
+            buttonCartBuy.run {
+                setOnClickListener {
+                    mainActivity.replaceFragment(MainActivity.PAYMENT_FRAGMENT, true, true, null)
+                }
+            }
         }
 
         return fragmentCartBinding.root

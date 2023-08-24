@@ -15,6 +15,7 @@ import com.test.campingusproject_customer.ui.comunity.ComunityFragment
 import com.test.campingusproject_customer.ui.comunity.PostReadFragment
 import com.test.campingusproject_customer.ui.myprofile.MyprofileFragment
 import com.test.campingusproject_customer.ui.payment.CartFragment
+import com.test.campingusproject_customer.ui.payment.PaymentFragment
 import com.test.campingusproject_customer.ui.shopping.ShoppingFragment
 import com.test.campingusproject_customer.ui.shopping.ShoppingPlusFragment
 
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         val SHOPPING_PLUS_FRAGMENT = "ShoppingPlusFragment"
         val POST_READ_FRAGMENT = "PostReadFragment"
         val CART_FRAGMENT = "CartFragment"
+        val PAYMENT_FRAGMENT = "PaymentFragment"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,6 +109,7 @@ class MainActivity : AppCompatActivity() {
             POST_READ_FRAGMENT -> PostReadFragment()
             SHOPPING_PLUS_FRAGMENT -> ShoppingPlusFragment()
             CART_FRAGMENT -> CartFragment()
+            PAYMENT_FRAGMENT -> PaymentFragment()
 
             else -> Fragment()
         }
