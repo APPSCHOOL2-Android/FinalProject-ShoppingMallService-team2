@@ -14,11 +14,14 @@ import com.test.campingusproject_customer.ui.comunity.PostWriteFragment
 import com.test.campingusproject_customer.ui.comunity.ComunityFragment
 import com.test.campingusproject_customer.ui.comunity.PostReadFragment
 import com.test.campingusproject_customer.ui.myprofile.MyprofileFragment
+import com.test.campingusproject_customer.ui.shopping.ShoppingFragment
+import com.test.campingusproject_customer.ui.shopping.ShoppingPlusFragment
+import com.test.campingusproject_customer.ui.user.AuthFragment
+import com.test.campingusproject_customer.ui.user.JoinFragment
+import com.test.campingusproject_customer.ui.user.LoginFragment
 import com.test.campingusproject_customer.ui.payment.CartFragment
 import com.test.campingusproject_customer.ui.payment.OrderDetailFragment
 import com.test.campingusproject_customer.ui.payment.PaymentFragment
-import com.test.campingusproject_customer.ui.shopping.ShoppingFragment
-import com.test.campingusproject_customer.ui.shopping.ShoppingPlusFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var activityMainBinding: ActivityMainBinding
@@ -34,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         val POST_WRITE_FRAGMENT = "PostWriteFragment"
         val SHOPPING_PLUS_FRAGMENT = "ShoppingPlusFragment"
         val POST_READ_FRAGMENT = "PostReadFragment"
+        val LOGIN_FRAGMENT = "LoginFragment"
+        val JOIN_FRAGMENT = "JoinFragment"
+        val AUTH_FRAGMENT = "AuthFragment"
         val CART_FRAGMENT = "CartFragment"
         val PAYMENT_FRAGMENT = "PaymentFragment"
         val ORDER_DETAIL_FRAGMENT = "OrderDetailFragment"
@@ -110,6 +116,9 @@ class MainActivity : AppCompatActivity() {
             POST_WRITE_FRAGMENT -> PostWriteFragment()
             POST_READ_FRAGMENT -> PostReadFragment()
             SHOPPING_PLUS_FRAGMENT -> ShoppingPlusFragment()
+            LOGIN_FRAGMENT -> LoginFragment()
+            JOIN_FRAGMENT -> JoinFragment()
+            AUTH_FRAGMENT -> AuthFragment()
             CART_FRAGMENT -> CartFragment()
             PAYMENT_FRAGMENT -> PaymentFragment()
             ORDER_DETAIL_FRAGMENT -> OrderDetailFragment()
