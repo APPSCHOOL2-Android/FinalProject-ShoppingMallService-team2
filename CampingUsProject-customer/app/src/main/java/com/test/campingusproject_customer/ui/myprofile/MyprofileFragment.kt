@@ -35,7 +35,7 @@ class MyprofileFragment : Fragment() {
                 title = "내정보"
                 //장바구니 가는 버튼
                 setOnMenuItemClickListener {
-                    title = "장바구니"
+                    mainActivity.replaceFragment(MainActivity.CART_FRAGMENT, true, true, null)
                     true
                 }
             }
