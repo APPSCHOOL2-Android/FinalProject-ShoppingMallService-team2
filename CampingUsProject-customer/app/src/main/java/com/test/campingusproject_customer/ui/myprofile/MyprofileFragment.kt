@@ -54,6 +54,13 @@ class MyprofileFragment : Fragment() {
                 }
             }
 
+            // 구매내역
+            textViewMyProfilePurchaseDetails.run {
+                setOnClickListener {
+                    mainActivity.replaceFragment(MainActivity.PURCHASE_HISTORY_FRAGMENT, true, true, null)
+                }
+            }
+
             //로그아웃
             textViewMyProfileLogout.run {
                 setOnClickListener {
