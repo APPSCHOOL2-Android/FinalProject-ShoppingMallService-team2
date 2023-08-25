@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextViewStyle" parent="@android:style/Widget.DeviceDefault.TextView">
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+    <style name="ButtonStyle" parent="@android:style/Widget.DeviceDefault.Button">
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+    <style name="EditTextStyle" parent="@android:style/Widget.DeviceDefault.EditText">
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+    <style name="CheckBoxStyle" parent="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox">
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="@android:style/Widget.DeviceDefault.Spinner">
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+    <style name="Widget.App.Button.TextButton.IconOnly" parent="Widget.Material3.Button.TextButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:minWidth">24dp</item>
+        <item name="android:minHeight">24dp</item>
+    </style>
+</resources>

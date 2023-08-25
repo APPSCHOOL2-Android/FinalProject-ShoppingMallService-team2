@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".ui.sellstatedetail.SellStateDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbarSellStateDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailOrderDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2023-08-10 주문"
+                    android:textSize="@dimen/text_size_3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailOrderNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12341234"
+                    android:textSize="@dimen/text_size_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailPayInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="결제 정보"
+                    android:textSize="@dimen/text_size_1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailPayTypeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="결제 수단"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailPayType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="토스"
+                    android:textSize="@dimen/text_size_2" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailPayDateTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="결제 일시"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailPayDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="2023-08-11 00:13"
+                    android:textSize="@dimen/text_size_2" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailProductPayHistoryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="결제 내역"
+                    android:textColor="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewSellStateDetailProductPriceTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="상품 가격"
+                        android:textSize="@dimen/text_size_2" />
+
+                    <TextView
+                        android:id="@+id/textViewSellStateDetailProductPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="90000원"
+                        android:textSize="@dimen/text_size_2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewSellStateDetailDeliveryPriceTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="배송비"
+                        android:textSize="@dimen/text_size_2" />
+
+                    <TextView
+                        android:id="@+id/textViewSellStateDetailDeliveryPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="5000원"
+                        android:textSize="@dimen/text_size_2" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#000000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewSellStateDetailTotalPriceTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="총 결제금액"
+                        android:textSize="@dimen/text_size_2" />
+
+                    <TextView
+                        android:id="@+id/textViewSellStateDetailTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="95000원"
+                        android:textSize="@dimen/text_size_2" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailOrderInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="주문자 정보"
+                    android:textSize="@dimen/text_size_1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailOrderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="주문자명"
+                    android:textSize="@dimen/text_size_2" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailOrderEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="email@naver.com"
+                    android:textSize="@dimen/text_size_2" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailOrderPhonNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="010-1234-1234"
+                    android:textSize="@dimen/text_size_2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailDeliveryInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="배송 정보"
+                    android:textSize="@dimen/text_size_1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailRecipientName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="받는 사람 이름"
+                    android:textSize="@dimen/text_size_2" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailRecipientPhonNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="010-9876-9876"
+                    android:textSize="@dimen/text_size_2" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailRecipientAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="(45678) 충북 청주시 상당구 금천동"
+                    android:textSize="@dimen/text_size_2" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailRecipientAddressDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="시그니엘타워 301동 2456호"
+                    android:textSize="@dimen/text_size_2" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/border"
+                android:padding="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailOrderProductInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="주문상품"
+                    android:textSize="@dimen/text_size_1"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="30dp" />
+
+                <ImageView
+                    android:id="@+id/imageViewSellStateDetailOrderProductImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewSellStateDetailOrderProductInfo"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailOrderProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="24dp"
+                    android:text="텐트"
+                    app:layout_constraintLeft_toRightOf="@id/imageViewSellStateDetailOrderProductImage"
+                    app:layout_constraintTop_toBottomOf="@id/textViewSellStateDetailOrderProductInfo" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailOrderProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="16dp"
+                    android:text="485000원"
+                    app:layout_constraintLeft_toRightOf="@id/imageViewSellStateDetailOrderProductImage"
+                    app:layout_constraintTop_toBottomOf="@id/textViewSellStateDetailOrderProductName" />
+
+                <TextView
+                    android:id="@+id/textViewSellStateDetailOrderProductNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="16dp"
+                    android:text="1개"
+                    app:layout_constraintLeft_toRightOf="@id/imageViewSellStateDetailOrderProductImage"
+                    app:layout_constraintTop_toBottomOf="@id/textViewSellStateDetailOrderProductPrice" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/border"
+                android:padding="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="주문 상태"
+                    android:textSize="@dimen/text_size_2" />
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="결제 완료"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/text_size_2" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

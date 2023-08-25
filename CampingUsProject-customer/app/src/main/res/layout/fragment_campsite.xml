@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.campsite.CampsiteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_anchorGravity="top|center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="캠핑장"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.naver.maps.map.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+    <com.google.android.material.search.SearchBar
+        android:id="@+id/searchBarCampLocation"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#80E3CAA5"
+        android:hint="검색할 캠핑장 지역"
+        app:layout_anchor="@id/map"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        app:layout_anchor="@id/map"
+        app:layout_anchorGravity="bottom|end">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonContractCampsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            app:srcCompat="@drawable/map_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#80FFFFFF"
+            android:text="제휴 캠핑장"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/highLightColor" />
+
+        <com.naver.maps.map.widget.LocationButtonView
+            android:id="@+id/buttonMyLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <com.google.android.material.search.SearchView
+        android:id="@+id/searchViewCampList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/searchBarCampLocation">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCampListResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.search.SearchView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
