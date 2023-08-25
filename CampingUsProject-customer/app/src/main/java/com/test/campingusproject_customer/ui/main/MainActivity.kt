@@ -26,6 +26,7 @@ import com.test.campingusproject_customer.ui.myprofile.MyQuestionListFragment
 import com.test.campingusproject_customer.ui.myprofile.MyPostListFragment
 import com.test.campingusproject_customer.ui.myprofile.MyprofileFragment
 import com.test.campingusproject_customer.ui.myprofile.PurchaseHistoryFragment
+import com.test.campingusproject_customer.ui.myprofile.ReviewWriteFragment
 import com.test.campingusproject_customer.ui.shopping.ShoppingFragment
 import com.test.campingusproject_customer.ui.shopping.ShoppingPlusFragment
 import com.test.campingusproject_customer.ui.user.AuthFragment
@@ -67,6 +68,7 @@ class MainActivity : AppCompatActivity() {
         val PURCHASE_HISTORY_FRAGMENT = "PurchaseHistoryFragment"
         val REVIEW_FRAGMENT = "ReviewFragment"
         val REVIEW_DETAIL_FRAGMENT = "ReviewDetailFragment"
+        val REVIEW_WRITE_FRAGMENT = "ReviewWriteFragment"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -155,6 +157,7 @@ class MainActivity : AppCompatActivity() {
             PURCHASE_HISTORY_FRAGMENT -> PurchaseHistoryFragment()
             REVIEW_FRAGMENT -> ReviewFragment()
             REVIEW_DETAIL_FRAGMENT -> ReviewDetailFragment()
+            REVIEW_WRITE_FRAGMENT -> ReviewWriteFragment()
 
             else -> Fragment()
         }

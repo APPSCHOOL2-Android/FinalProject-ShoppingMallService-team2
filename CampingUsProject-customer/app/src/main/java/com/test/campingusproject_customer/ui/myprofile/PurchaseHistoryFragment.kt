@@ -35,6 +35,15 @@ class PurchaseHistoryFragment : Fragment() {
 
         fragmentPurchaseHistoryBinding.run {
 
+            // 툴바
+            toolbarPayment.run {
+                //백버튼 설정
+                setNavigationIcon(androidx.appcompat.R.drawable.abc_ic_ab_back_material)
+                setNavigationOnClickListener {
+                    mainActivity.removeFragment(MainActivity.CART_FRAGMENT)
+                }
+            }
+
             // 리사이클러 뷰
             recyclerViewPurchaseHistory.run {
                 adapter = PurchaseHistoryAdapter()
@@ -57,8 +66,6 @@ class PurchaseHistoryFragment : Fragment() {
             init {
                 textViewRowPurchaseHistoryDate = rowPurchaseHistoryBinding.textViewRowPurchaseHistoryDate
                 buttonRowPurchaseHistory = rowPurchaseHistoryBinding.buttonRowPurchaseHistory
-
-
 
                 // 안쪽 주문내역 리사이클러뷰 호출
                 rowPurchaseHistoryBinding.recyclerViewRowPurchaseHistory.adapter = PurchaseHistoryItemAdapter()
@@ -112,9 +119,7 @@ class PurchaseHistoryFragment : Fragment() {
                 textViewRowPurchaseHistoryItemStateDone = rowPurchaseHistoryItemBinding.textViewRowPurchaseHistoryItemStateDone
                 textViewRowPurchaseHistoryItemReview = rowPurchaseHistoryItemBinding.textViewRowPurchaseHistoryItemReview
 
-                textViewRowPurchaseHistoryItemReview.setOnClickListener {
 
-                }
             }
         }
 
@@ -147,6 +152,9 @@ class PurchaseHistoryFragment : Fragment() {
                 holder.textViewRowPurchaseHistoryItemReview.visibility = View.GONE
             }
 
+            holder.textViewRowPurchaseHistoryItemReview.setOnClickListener {
+                mainActivity.replaceFragment(MainActivity.REVIEW_WRITE_FRAGMENT, true, true, null)
+            }
         }
     }
 
